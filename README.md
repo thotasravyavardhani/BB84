@@ -1,67 +1,74 @@
-# BB84
-A Python application built with Streamlit that provides an interactive and educational tool for understanding the BB84 Quantum Key Distribution protocol. Simulate key exchange, visualize qubit flow, and analyze key metrics like the Quantum Bit Error Rate (QBER).
-
-
 # BB84 Quantum Key Distribution Visual Simulator
 
-# Description
-The BB84 Visual Simulator is a Python application built with Streamlit that provides an interactive and educational tool for understanding the BB84 Quantum Key Distribution (QKD) protocol. It allows you to simulate the key exchange process, visualize the flow of qubits between Alice, Eve, and Bob, and analyze the results, including the Quantum Bit Error Rate (QBER).
+---
 
-The simulator features multiple backends, including a classical mathematical model, Qiskit's Aer simulator, and a path for running on real IBM Quantum hardware. It also includes post-processing steps such as error correction and privacy amplification.
+### Description
 
-# Key Features
-Interactive Simulation: Adjust parameters like the number of qubits, Eve's intercept probability, and channel noise in a real-time environment.
+A Python-based application that provides an interactive and educational tool for understanding the BB84 Quantum Key Distribution (QKD) protocol. The simulator allows you to visualize the key exchange process, analyze results, and explore different backends, including real quantum hardware.
 
-Multiple Backends: Run the simulation on a classical math simulator, Qiskit's Aer Simulator with noise models, or on an IBM Quantum device.
+---
 
-Animated Visualization: Watch the qubits travel from Alice to Bob, with a detailed view of how Eve's interception affects the process.
+### 🔧 Features
 
-Key Post-processing: Simulate Cascade-lite error correction (EC) and BLAKE2s privacy amplification (PA) to see how keys are refined after the initial exchange.
+* **Interactive Controls:** Easily adjust simulation parameters like the number of qubits, Eve's intercept probability, and channel noise.
 
-Detailed Metrics: View key metrics such as sifted key length, QBER, and the final key length after post-processing.
+* **Multiple Backends:** Run simulations on a **classical mathematical model**, Qiskit's **Aer Simulator**, or a real **IBM Quantum device**.
 
-Comprehensive Logs: A log panel tracks each step of the protocol, from preparation to key reconciliation.
+* **Animated Visualization:** See qubits travel from Alice to Bob in an animated flow, highlighting how Eve's interception affects the process.
 
+* **Post-processing:** Simulate **error correction (EC)** and **privacy amplification (PA)** to see how keys are secured.
 
-# Getting Started
-To run this application, you will need Python 3.11 and the required libraries.
+* **Detailed Metrics:** Get key insights with metrics such as sifted key length, QBER, and final key length.
 
-Clone this repository or save the app.py, bb84_backend.py, and requirements.txt files to a single directory on your computer.
+* **Comprehensive Logs:** A log panel tracks each step of the protocol for full transparency.
 
-Open your terminal or command prompt and navigate to the project directory.
+---
 
-Install the required Python libraries by running the following command:
+### 🛠️ Tech Stack
 
-# pip install -r requirements.txt
+| Tool / Library | Purpose |
+| :--- | :--- |
+| **Python 3.11** | Core programming language |
+| **Streamlit** | Building the interactive web application |
+| **NumPy** | Numerical operations and array handling |
+| **Pandas** | Data manipulation for tables and metrics |
+| **Plotly** | Creating interactive graphs and animations |
+| **Qiskit** | Building quantum circuits and running on backends |
+| **Qiskit Aer** | Simulating quantum circuits with noise models |
+| **Qiskit IBM Runtime** | Connecting to and running on IBM's real quantum hardware |
 
-This will install streamlit, numpy, pandas, plotly, qiskit, qiskit-aer, and qiskit-ibm-runtime.
+---
 
-# Run the application using Streamlit:
+### 🚀 How to Run
 
-streamlit run app.py
+1.  Clone the repository or save the `app.py`, `bb84_backend.py`, and `requirements.txt` files into a single directory.
 
-The application will open in your web browser.
+2.  Open your terminal and navigate to the project directory.
 
+3.  Install the required libraries:
 
-# Usage
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  Run the Streamlit application:
+
+    ```bash
+    streamlit run app.py
+    ```
+
+    The application will open automatically in your web browser.
+
+---
+
+### 📝 Usage
+
 Once the application is running, you can use the sidebar to control the simulation:
 
-Scenario Presets: Choose from predefined scenarios like "Clean Fiber" or "Aggressive Eve" to quickly load settings.
+* **Scenario Presets:** Quickly load predefined scenarios like "Clean Fiber" or "Aggressive Eve."
 
-Simulation Controls: Manually adjust the number of qubits, Eve's intercept probability, and other parameters.
+* **Simulation Controls:** Manually fine-tune parameters for a custom simulation.
 
-Backend Selection: Switch between the classical simulator, Aer simulator, and a real quantum device.
+* **Backend Selection:** Switch between the classical simulator, Aer simulator, and a real quantum device.
 
-Run Simulation: Click the ▶ Run Simulation button to start the protocol and watch the animation.
-
-
-# Dependencies
-The dependencies for this project are listed in the requirements.txt file and include popular libraries for data science, visualization, and quantum computing.
-
-streamlit
-numpy
-pandas
-plotly
-qiskit
-qiskit-aer
-qiskit-ibm-runtime
+* **Run Simulation:** Click the button to start the protocol and watch the animation unfold.
